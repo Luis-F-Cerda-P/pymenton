@@ -1,2 +1,2 @@
-json.extract! attribute_field, :id, :name, :created_at, :updated_at
-json.url attribute_field_url(attribute_field, format: :json)
+json.extract! attribute_type, :id, :description, :created_at, :updated_at
+json.url attribute_type_url(attribute_type, format: :json)

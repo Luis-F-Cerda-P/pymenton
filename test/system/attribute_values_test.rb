@@ -1,43 +1,43 @@
-require "application_system_test_case"
+require 'application_system_test_case'
 
-class AttributeValuesTest < ApplicationSystemTestCase
+class AttributesTest < ApplicationSystemTestCase
   setup do
-    @attribute_value = attribute_values(:one)
+    @attribute = attributes(:one)
   end
 
-  test "visiting the index" do
-    visit attribute_values_url
-    assert_selector "h1", text: "Attribute values"
+  test 'visiting the index' do
+    visit attributes_url
+    assert_selector 'h1', text: 'Attributes'
   end
 
-  test "should create attribute value" do
-    visit attribute_values_url
-    click_on "New attribute value"
+  test 'should create attribute' do
+    visit attributes_url
+    click_on 'New attribute'
 
-    fill_in "Attribute field", with: @attribute_value.attribute_field_id
-    fill_in "Name", with: @attribute_value.name
-    click_on "Create Attribute value"
+    fill_in 'attribute type', with: @attribute.attribute_type_id
+    fill_in 'Name', with: @attribute.name
+    click_on 'Create attribute'
 
-    assert_text "Attribute value was successfully created"
-    click_on "Back"
+    assert_text 'attribute was successfully created'
+    click_on 'Back'
   end
 
-  test "should update Attribute value" do
-    visit attribute_value_url(@attribute_value)
-    click_on "Edit this attribute value", match: :first
+  test 'should update attribute' do
+    visit attribute_url(@attribute)
+    click_on 'Edit this attribute', match: :first
 
-    fill_in "Attribute field", with: @attribute_value.attribute_field_id
-    fill_in "Name", with: @attribute_value.name
-    click_on "Update Attribute value"
+    fill_in 'attribute type', with: @attribute.attribute_type_id
+    fill_in 'Name', with: @attribute.name
+    click_on 'Update attribute'
 
-    assert_text "Attribute value was successfully updated"
-    click_on "Back"
+    assert_text 'attribute was successfully updated'
+    click_on 'Back'
   end
 
-  test "should destroy Attribute value" do
-    visit attribute_value_url(@attribute_value)
-    click_on "Destroy this attribute value", match: :first
+  test 'should destroy attribute' do
+    visit attribute_url(@attribute)
+    click_on 'Destroy this attribute', match: :first
 
-    assert_text "Attribute value was successfully destroyed"
+    assert_text 'attribute was successfully destroyed'
   end
 end

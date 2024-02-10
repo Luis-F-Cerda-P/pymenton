@@ -1,3 +1,4 @@
 class AttributeType < ApplicationRecord
-  validates :name, uniqueness: true
+  has_many :attr, class_name: 'Attribute'
+  validates :description, uniqueness: true
 end

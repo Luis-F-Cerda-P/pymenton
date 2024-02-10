@@ -1,6 +1,6 @@
-require "test_helper"
+require 'test_helper'
 
-class AttributeFieldTest < ActiveSupport::TestCase
+class AttributeTypeTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_10_184357) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_10_195429) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,12 +20,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_10_184357) do
     t.string "description"
   end
 
-  create_table "attribute_values", force: :cascade do |t|
-    t.bigint "attribute_field_id", null: false
+  create_table "attributes", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "description"
-    t.index ["attribute_field_id"], name: "index_attribute_values_on_attribute_field_id"
+    t.bigint "attribute_type_id", null: false
+    t.index ["attribute_type_id"], name: "index_attributes_on_attribute_type_id"
   end
 
   create_table "contact_channels", force: :cascade do |t|
@@ -172,7 +172,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_10_184357) do
     t.index ["location_id"], name: "index_units_on_location_id"
   end
 
-  add_foreign_key "attribute_values", "attribute_types", column: "attribute_field_id"
+  add_foreign_key "attributes", "attribute_types"
   add_foreign_key "goods_orders", "contact_channels"
   add_foreign_key "goods_orders", "goods_order_types"
   add_foreign_key "goods_orders", "transportation_orders"

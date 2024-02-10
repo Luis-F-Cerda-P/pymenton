@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  attribute_field: one
+  attribute_type: one
 
 two:
   name: MyString
-  attribute_field: two
+  attribute_type: two

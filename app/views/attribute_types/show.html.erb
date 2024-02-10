@@ -1,10 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @attribute_field %>
+<%= render @attribute_type %>
 
 <div>
-  <%= link_to "Edit this attribute field", edit_attribute_field_path(@attribute_field) %> |
-  <%= link_to "Back to attribute fields", attribute_fields_path %>
+  <%= link_to "Edit this attribute type", edit_attribute_type_path(@attribute_type) %> |
+  <%= link_to "Back to attribute types", attribute_types_path %>
 
-  <%= button_to "Destroy this attribute field", @attribute_field, method: :delete %>
+  <%= button_to "Destroy this attribute type", @attribute_type, method: :delete %>
 </div>

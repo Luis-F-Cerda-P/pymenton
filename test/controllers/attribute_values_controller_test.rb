@@ -1,48 +1,50 @@
-require "test_helper"
+require 'test_helper'
 
-class AttributeValuesControllerTest < ActionDispatch::IntegrationTest
+class AttributesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @attribute_value = attribute_values(:one)
+    @attribute = attributes(:one)
   end
 
-  test "should get index" do
-    get attribute_values_url
+  test 'should get index' do
+    get attributes_url
     assert_response :success
   end
 
-  test "should get new" do
-    get new_attribute_value_url
+  test 'should get new' do
+    get new_attribute_url
     assert_response :success
   end
 
-  test "should create attribute_value" do
-    assert_difference("AttributeValue.count") do
-      post attribute_values_url, params: { attribute_value: { attribute_field_id: @attribute_value.attribute_field_id, name: @attribute_value.name } }
+  test 'should create attribute' do
+    assert_difference('Attribute.count') do
+      post attributes_url,
+           params: { attribute: { attribute_type_id: @attribute.attribute_type_id, name: @attribute.name } }
     end
 
-    assert_redirected_to attribute_value_url(AttributeValue.last)
+    assert_redirected_to attribute_url(Attribute.last)
   end
 
-  test "should show attribute_value" do
-    get attribute_value_url(@attribute_value)
+  test 'should show attribute' do
+    get attribute_url(@attribute)
     assert_response :success
   end
 
-  test "should get edit" do
-    get edit_attribute_value_url(@attribute_value)
+  test 'should get edit' do
+    get edit_attribute_url(@attribute)
     assert_response :success
   end
 
-  test "should update attribute_value" do
-    patch attribute_value_url(@attribute_value), params: { attribute_value: { attribute_field_id: @attribute_value.attribute_field_id, name: @attribute_value.name } }
-    assert_redirected_to attribute_value_url(@attribute_value)
+  test 'should update attribute' do
+    patch attribute_url(@attribute),
+          params: { attribute: { attribute_type_id: @attribute.attribute_type_id, name: @attribute.name } }
+    assert_redirected_to attribute_url(@attribute)
   end
 
-  test "should destroy attribute_value" do
-    assert_difference("AttributeValue.count", -1) do
-      delete attribute_value_url(@attribute_value)
+  test 'should destroy attribute' do
+    assert_difference('Attribute.count', -1) do
+      delete attribute_url(@attribute)
     end
 
-    assert_redirected_to attribute_values_url
+    assert_redirected_to attributes_url
   end
 end

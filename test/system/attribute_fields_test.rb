@@ -1,41 +1,41 @@
-require "application_system_test_case"
+require 'application_system_test_case'
 
-class AttributeFieldsTest < ApplicationSystemTestCase
+class AttributeTypesTest < ApplicationSystemTestCase
   setup do
-    @attribute_field = attribute_fields(:one)
+    @attribute_type = attribute_types(:one)
   end
 
-  test "visiting the index" do
-    visit attribute_fields_url
-    assert_selector "h1", text: "Attribute fields"
+  test 'visiting the index' do
+    visit attribute_types_url
+    assert_selector 'h1', text: 'attribute types'
   end
 
-  test "should create attribute field" do
-    visit attribute_fields_url
-    click_on "New attribute field"
+  test 'should create attribute type' do
+    visit attribute_types_url
+    click_on 'New attribute type'
 
-    fill_in "Name", with: @attribute_field.name
-    click_on "Create Attribute field"
+    fill_in 'Name', with: @attribute_type.name
+    click_on 'Create attribute type'
 
-    assert_text "Attribute field was successfully created"
-    click_on "Back"
+    assert_text 'attribute type was successfully created'
+    click_on 'Back'
   end
 
-  test "should update Attribute field" do
-    visit attribute_field_url(@attribute_field)
-    click_on "Edit this attribute field", match: :first
+  test 'should update attribute type' do
+    visit attribute_type_url(@attribute_type)
+    click_on 'Edit this attribute type', match: :first
 
-    fill_in "Name", with: @attribute_field.name
-    click_on "Update Attribute field"
+    fill_in 'Name', with: @attribute_type.name
+    click_on 'Update attribute type'
 
-    assert_text "Attribute field was successfully updated"
-    click_on "Back"
+    assert_text 'attribute type was successfully updated'
+    click_on 'Back'
   end
 
-  test "should destroy Attribute field" do
-    visit attribute_field_url(@attribute_field)
-    click_on "Destroy this attribute field", match: :first
+  test 'should destroy attribute type' do
+    visit attribute_type_url(@attribute_type)
+    click_on 'Destroy this attribute type', match: :first
 
-    assert_text "Attribute field was successfully destroyed"
+    assert_text 'attribute type was successfully destroyed'
   end
 end

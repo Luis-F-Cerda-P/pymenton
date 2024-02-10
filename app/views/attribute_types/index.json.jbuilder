@@ -1,1 +1,1 @@
-json.array! @attribute_fields, partial: "attribute_fields/attribute_field", as: :attribute_field
+json.array! @attribute_types, partial: 'attribute_types/attribute_type', as: :attribute_type

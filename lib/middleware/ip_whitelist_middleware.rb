@@ -4,9 +4,9 @@ module Middleware
       @app = app
     end
 
-    def call(env)
+    def call(env) # rubocop:disable Metrics/MethodLength
       request = ActionDispatch::Request.new(env)
-      allowed_ips = 
+      allowed_ips =
         [
           '54.88.218.97',
           '18.215.140.160',

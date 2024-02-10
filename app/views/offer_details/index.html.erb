@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Offer details</h1>
+
+<div id="offer_details">
+  <% @offer_details.each do |offer_detail| %>
+    <%= render offer_detail %>
+    <p>
+      <%= link_to "Show this offer detail", offer_detail %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New offer detail", new_offer_detail_path %>

@@ -1,0 +1,22 @@
+<%= form_with(model: contact_channel) do |form| %>
+  <% if contact_channel.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(contact_channel.errors.count, "error") %> prohibited this contact_channel from being saved:</h2>
+
+      <ul>
+        <% contact_channel.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

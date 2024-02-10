@@ -25,7 +25,7 @@ class NotificationsController < ApplicationController
   def create
     @notification = Notification.new(notification_params)
 
-    p request.env['HTTP_FLY_CLIENT_IP']
+    # p request.env['HTTP_FLY_CLIENT_IP'] << A way to show the IP of the client that originally communicated with Fly.io 
 
     respond_to do |format|
       if @notification.save

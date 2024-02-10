@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Attribute fields</h1>
+
+<div id="attribute_fields">
+  <% @attribute_fields.each do |attribute_field| %>
+    <%= render attribute_field %>
+    <p>
+      <%= link_to "Show this attribute field", attribute_field %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New attribute field", new_attribute_field_path %>

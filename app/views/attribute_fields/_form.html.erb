@@ -1,0 +1,22 @@
+<%= form_with(model: attribute_field) do |form| %>
+  <% if attribute_field.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(attribute_field.errors.count, "error") %> prohibited this attribute_field from being saved:</h2>
+
+      <ul>
+        <% attribute_field.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

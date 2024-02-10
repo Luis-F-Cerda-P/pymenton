@@ -1,0 +1,2 @@
+module AttributeFieldsHelper
+end

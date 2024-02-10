@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  minimun_stock: 1
+  identifiers: one
+
+two:
+  name: MyString
+  minimun_stock: 1
+  identifiers: two

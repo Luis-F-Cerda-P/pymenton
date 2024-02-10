@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contact_channel: one
+  goods_order_type: one
+  transportation_order: one
+
+two:
+  contact_channel: two
+  goods_order_type: two
+  transportation_order: two

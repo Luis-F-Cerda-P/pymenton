@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @identifier_type %>
+
+<div>
+  <%= link_to "Edit this identifier type", edit_identifier_type_path(@identifier_type) %> |
+  <%= link_to "Back to identifier types", identifier_types_path %>
+
+  <%= button_to "Destroy this identifier type", @identifier_type, method: :delete %>
+</div>

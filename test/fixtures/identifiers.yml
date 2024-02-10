@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  value: MyString
+  main_identifier: false
+  identifier_type: one
+  identifiable: one
+  identifiable_type: Identifiable
+
+two:
+  value: MyString
+  main_identifier: false
+  identifier_type: two
+  identifiable: two
+  identifiable_type: Identifiable

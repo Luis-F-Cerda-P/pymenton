@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Contact mechanisms</h1>
+
+<div id="contact_mechanisms">
+  <% @contact_mechanisms.each do |contact_mechanism| %>
+    <%= render contact_mechanism %>
+    <p>
+      <%= link_to "Show this contact mechanism", contact_mechanism %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New contact mechanism", new_contact_mechanism_path %>

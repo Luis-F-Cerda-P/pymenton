@@ -1,0 +1,27 @@
+<%= form_with(model: good_identification) do |form| %>
+  <% if good_identification.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(good_identification.errors.count, "error") %> prohibited this good_identification from being saved:</h2>
+
+      <ul>
+        <% good_identification.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :good_id, style: "display: block" %>
+    <%= form.text_field :good_id %>
+  </div>
+
+  <div>
+    <%= form.label :identification_id, style: "display: block" %>
+    <%= form.text_field :identification_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

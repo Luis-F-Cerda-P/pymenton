@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Picklists</h1>
+
+<div id="picklists">
+  <% @picklists.each do |picklist| %>
+    <%= render picklist %>
+    <p>
+      <%= link_to "Show this picklist", picklist %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New picklist", new_picklist_path %>

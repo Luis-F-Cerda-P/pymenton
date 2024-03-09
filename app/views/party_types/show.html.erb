@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @party_type %>
+
+<div>
+  <%= link_to "Edit this party type", edit_party_type_path(@party_type) %> |
+  <%= link_to "Back to party types", party_types_path %>
+
+  <%= button_to "Destroy this party type", @party_type, method: :delete %>
+</div>

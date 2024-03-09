@@ -1,0 +1,2 @@
+class Picklist < ApplicationRecord
+end

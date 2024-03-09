@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @applicability_type %>
+
+<div>
+  <%= link_to "Edit this applicability type", edit_applicability_type_path(@applicability_type) %> |
+  <%= link_to "Back to applicability types", applicability_types_path %>
+
+  <%= button_to "Destroy this applicability type", @applicability_type, method: :delete %>
+</div>

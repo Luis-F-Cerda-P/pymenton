@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Applicability types</h1>
+
+<div id="applicability_types">
+  <% @applicability_types.each do |applicability_type| %>
+    <%= render applicability_type %>
+    <p>
+      <%= link_to "Show this applicability type", applicability_type %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New applicability type", new_applicability_type_path %>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Packaging contents</h1>
+
+<div id="packaging_contents">
+  <% @packaging_contents.each do |packaging_content| %>
+    <%= render packaging_content %>
+    <p>
+      <%= link_to "Show this packaging content", packaging_content %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New packaging content", new_packaging_content_path %>

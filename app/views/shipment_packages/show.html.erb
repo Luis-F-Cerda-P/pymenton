@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @shipment_package %>
+
+<div>
+  <%= link_to "Edit this shipment package", edit_shipment_package_path(@shipment_package) %> |
+  <%= link_to "Back to shipment packages", shipment_packages_path %>
+
+  <%= button_to "Destroy this shipment package", @shipment_package, method: :delete %>
+</div>

@@ -1,0 +1,22 @@
+<%= form_with(model: contact_mechanism) do |form| %>
+  <% if contact_mechanism.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(contact_mechanism.errors.count, "error") %> prohibited this contact_mechanism from being saved:</h2>
+
+      <ul>
+        <% contact_mechanism.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :contact_mechanism_type_id, style: "display: block" %>
+    <%= form.text_field :contact_mechanism_type_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module ContactMechanismTypesHelper
+end

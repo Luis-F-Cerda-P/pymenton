@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order_item: one
+  inventory_item: one
+  shipment: one
+  shipment_package: one
+  quantity_accepted: 1
+
+two:
+  order_item: two
+  inventory_item: two
+  shipment: two
+  shipment_package: two
+  quantity_accepted: 1

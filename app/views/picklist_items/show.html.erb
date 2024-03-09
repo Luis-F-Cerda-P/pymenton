@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @picklist_item %>
+
+<div>
+  <%= link_to "Edit this picklist item", edit_picklist_item_path(@picklist_item) %> |
+  <%= link_to "Back to picklist items", picklist_items_path %>
+
+  <%= button_to "Destroy this picklist item", @picklist_item, method: :delete %>
+</div>

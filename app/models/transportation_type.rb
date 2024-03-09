@@ -1,2 +1,0 @@
-class TransportationType < ApplicationRecord
-end

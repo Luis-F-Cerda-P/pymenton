@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @contact_mechanism_type %>
+
+<div>
+  <%= link_to "Edit this contact mechanism type", edit_contact_mechanism_type_path(@contact_mechanism_type) %> |
+  <%= link_to "Back to contact mechanism types", contact_mechanism_types_path %>
+
+  <%= button_to "Destroy this contact mechanism type", @contact_mechanism_type, method: :delete %>
+</div>

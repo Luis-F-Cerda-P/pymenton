@@ -22,14 +22,23 @@ def seed_exists?(path)
 end
 
 def load_seed(path, model_name)
-  csv_data = CSV.read(path, headers: true)
+  seeded_counter = 0
+  csv_data = if model_name != 'Offer' && model_name != 'Product'
+               CSV.read(path, headers: true, liberal_parsing: true)
+             else
+               CSV.read(path, headers: true, col_sep: '{', liberal_parsing: true)
+             end
   model = model_name.constantize
   # Process the CSV data here
   csv_data.each do |row|
-    model.create(row.to_hash)
+    attempt = model.new(row.to_hash)
+    if attempt.valid?
+      attempt.save
+      seeded_counter += 1
+    end
   end
 
-  puts "We seeded #{model.count} records for the #{model} model"
+  puts "We seeded #{seeded_counter} records for the #{model} model. Currently this model holds #{model.count} records"
 end
 
 models = obtain_all_model_names

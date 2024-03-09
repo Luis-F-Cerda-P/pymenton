@@ -1,0 +1,37 @@
+<%= form_with(model: item_issuance) do |form| %>
+  <% if item_issuance.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(item_issuance.errors.count, "error") %> prohibited this item_issuance from being saved:</h2>
+
+      <ul>
+        <% item_issuance.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :picklist_item_id, style: "display: block" %>
+    <%= form.text_field :picklist_item_id %>
+  </div>
+
+  <div>
+    <%= form.label :shipment_item_id, style: "display: block" %>
+    <%= form.text_field :shipment_item_id %>
+  </div>
+
+  <div>
+    <%= form.label :inventory_item_id, style: "display: block" %>
+    <%= form.text_field :inventory_item_id %>
+  </div>
+
+  <div>
+    <%= form.label :quantity, style: "display: block" %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

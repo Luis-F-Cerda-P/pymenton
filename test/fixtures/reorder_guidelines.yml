@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  good: one
+  facility: one
+  from_date: 2024-03-02 14:34:20
+  thru_date: 2024-03-02 14:34:20
+  reorder_quantity: 1
+  reorder_level: 1
+
+two:
+  good: two
+  facility: two
+  from_date: 2024-03-02 14:34:20
+  thru_date: 2024-03-02 14:34:20
+  reorder_quantity: 1
+  reorder_level: 1

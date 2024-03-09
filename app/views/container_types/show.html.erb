@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @container_type %>
+
+<div>
+  <%= link_to "Edit this container type", edit_container_type_path(@container_type) %> |
+  <%= link_to "Back to container types", container_types_path %>
+
+  <%= button_to "Destroy this container type", @container_type, method: :delete %>
+</div>

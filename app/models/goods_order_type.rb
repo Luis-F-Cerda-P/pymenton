@@ -1,2 +1,0 @@
-class GoodsOrderType < ApplicationRecord
-end

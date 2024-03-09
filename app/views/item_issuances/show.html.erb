@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @item_issuance %>
+
+<div>
+  <%= link_to "Edit this item issuance", edit_item_issuance_path(@item_issuance) %> |
+  <%= link_to "Back to item issuances", item_issuances_path %>
+
+  <%= button_to "Destroy this item issuance", @item_issuance, method: :delete %>
+</div>

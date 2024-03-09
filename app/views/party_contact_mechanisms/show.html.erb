@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @party_contact_mechanism %>
+
+<div>
+  <%= link_to "Edit this party contact mechanism", edit_party_contact_mechanism_path(@party_contact_mechanism) %> |
+  <%= link_to "Back to party contact mechanisms", party_contact_mechanisms_path %>
+
+  <%= button_to "Destroy this party contact mechanism", @party_contact_mechanism, method: :delete %>
+</div>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @good_identification %>
+
+<div>
+  <%= link_to "Edit this good identification", edit_good_identification_path(@good_identification) %> |
+  <%= link_to "Back to good identifications", good_identifications_path %>
+
+  <%= button_to "Destroy this good identification", @good_identification, method: :delete %>
+</div>

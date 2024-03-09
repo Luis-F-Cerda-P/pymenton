@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  feature: one
+  good: one
+  applicability_type: one
+  from_date: 2024-03-02 14:50:42
+  thru_date: 2024-03-02 14:50:42
+
+two:
+  feature: two
+  good: two
+  applicability_type: two
+  from_date: 2024-03-02 14:50:42
+  thru_date: 2024-03-02 14:50:42

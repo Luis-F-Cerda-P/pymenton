@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Reorder guidelines</h1>
+
+<div id="reorder_guidelines">
+  <% @reorder_guidelines.each do |reorder_guideline| %>
+    <%= render reorder_guideline %>
+    <p>
+      <%= link_to "Show this reorder guideline", reorder_guideline %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New reorder guideline", new_reorder_guideline_path %>

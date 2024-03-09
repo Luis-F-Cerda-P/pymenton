@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  good: one
+  facility: one
+  container: one
+  lot: one
+  quantity: 1
+
+two:
+  good: two
+  facility: two
+  container: two
+  lot: two
+  quantity: 1

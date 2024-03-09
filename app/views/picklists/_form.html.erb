@@ -1,0 +1,17 @@
+<%= form_with(model: picklist) do |form| %>
+  <% if picklist.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(picklist.errors.count, "error") %> prohibited this picklist from being saved:</h2>
+
+      <ul>
+        <% picklist.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

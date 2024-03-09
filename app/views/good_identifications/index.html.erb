@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Good identifications</h1>
+
+<div id="good_identifications">
+  <% @good_identifications.each do |good_identification| %>
+    <%= render good_identification %>
+    <p>
+      <%= link_to "Show this good identification", good_identification %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New good identification", new_good_identification_path %>

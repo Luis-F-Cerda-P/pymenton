@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shipment: one
+  shipment_status_type: one
+
+two:
+  shipment: two
+  shipment_status_type: two

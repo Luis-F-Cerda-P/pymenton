@@ -1,0 +1,2 @@
+module GoodIdentificationsHelper
+end

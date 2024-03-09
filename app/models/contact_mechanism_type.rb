@@ -1,0 +1,2 @@
+class ContactMechanismType < ApplicationRecord
+end

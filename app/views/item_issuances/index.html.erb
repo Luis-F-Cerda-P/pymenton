@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Item issuances</h1>
+
+<div id="item_issuances">
+  <% @item_issuances.each do |item_issuance| %>
+    <%= render item_issuance %>
+    <p>
+      <%= link_to "Show this item issuance", item_issuance %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New item issuance", new_item_issuance_path %>

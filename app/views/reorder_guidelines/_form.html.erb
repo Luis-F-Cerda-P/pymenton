@@ -1,0 +1,47 @@
+<%= form_with(model: reorder_guideline) do |form| %>
+  <% if reorder_guideline.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(reorder_guideline.errors.count, "error") %> prohibited this reorder_guideline from being saved:</h2>
+
+      <ul>
+        <% reorder_guideline.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :good_id, style: "display: block" %>
+    <%= form.text_field :good_id %>
+  </div>
+
+  <div>
+    <%= form.label :facility_id, style: "display: block" %>
+    <%= form.text_field :facility_id %>
+  </div>
+
+  <div>
+    <%= form.label :from_date, style: "display: block" %>
+    <%= form.datetime_field :from_date %>
+  </div>
+
+  <div>
+    <%= form.label :thru_date, style: "display: block" %>
+    <%= form.datetime_field :thru_date %>
+  </div>
+
+  <div>
+    <%= form.label :reorder_quantity, style: "display: block" %>
+    <%= form.number_field :reorder_quantity %>
+  </div>
+
+  <div>
+    <%= form.label :reorder_level, style: "display: block" %>
+    <%= form.number_field :reorder_level %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

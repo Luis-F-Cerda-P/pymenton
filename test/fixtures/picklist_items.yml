@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  picklist: one
+  inventory_item: one
+  quantity: 1
+
+two:
+  picklist: two
+  inventory_item: two
+  quantity: 1

@@ -1,0 +1,2 @@
+class ShipmentType < ApplicationRecord
+end

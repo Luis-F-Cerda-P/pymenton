@@ -1,0 +1,2 @@
+class ShipmentStatusType < ApplicationRecord
+end

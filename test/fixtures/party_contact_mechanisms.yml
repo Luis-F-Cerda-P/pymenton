@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contact_mechanism: one
+  party: one
+
+two:
+  contact_mechanism: two
+  party: two

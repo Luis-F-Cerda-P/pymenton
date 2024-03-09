@@ -1,0 +1,32 @@
+<%= form_with(model: picklist_item) do |form| %>
+  <% if picklist_item.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(picklist_item.errors.count, "error") %> prohibited this picklist_item from being saved:</h2>
+
+      <ul>
+        <% picklist_item.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :picklist_id, style: "display: block" %>
+    <%= form.text_field :picklist_id %>
+  </div>
+
+  <div>
+    <%= form.label :inventory_item_id, style: "display: block" %>
+    <%= form.text_field :inventory_item_id %>
+  </div>
+
+  <div>
+    <%= form.label :quantity, style: "display: block" %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

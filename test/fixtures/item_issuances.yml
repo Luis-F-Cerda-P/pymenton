@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  picklist_item: one
+  shipment_item: one
+  inventory_item: one
+  quantity: 1
+
+two:
+  picklist_item: two
+  shipment_item: two
+  inventory_item: two
+  quantity: 1

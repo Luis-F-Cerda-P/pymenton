@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Feature applicabilities</h1>
+
+<div id="feature_applicabilities">
+  <% @feature_applicabilities.each do |feature_applicability| %>
+    <%= render feature_applicability %>
+    <p>
+      <%= link_to "Show this feature applicability", feature_applicability %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New feature applicability", new_feature_applicability_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  good: one
+  good: one
+  date_from: 2024-03-03 13:46:33
+  date_thru: 2024-03-03 13:46:33
+  quantity: 1
+
+two:
+  good: two
+  good: two
+  date_from: 2024-03-03 13:46:33
+  date_thru: 2024-03-03 13:46:33
+  quantity: 1

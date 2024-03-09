@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Party contact mechanisms</h1>
+
+<div id="party_contact_mechanisms">
+  <% @party_contact_mechanisms.each do |party_contact_mechanism| %>
+    <%= render party_contact_mechanism %>
+    <p>
+      <%= link_to "Show this party contact mechanism", party_contact_mechanism %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New party contact mechanism", new_party_contact_mechanism_path %>

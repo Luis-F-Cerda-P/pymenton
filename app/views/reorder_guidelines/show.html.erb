@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @reorder_guideline %>
+
+<div>
+  <%= link_to "Edit this reorder guideline", edit_reorder_guideline_path(@reorder_guideline) %> |
+  <%= link_to "Back to reorder guidelines", reorder_guidelines_path %>
+
+  <%= button_to "Destroy this reorder guideline", @reorder_guideline, method: :delete %>
+</div>

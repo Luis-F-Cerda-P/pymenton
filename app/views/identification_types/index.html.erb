@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Identification types</h1>
+
+<div id="identification_types">
+  <% @identification_types.each do |identification_type| %>
+    <%= render identification_type %>
+    <p>
+      <%= link_to "Show this identification type", identification_type %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New identification type", new_identification_type_path %>

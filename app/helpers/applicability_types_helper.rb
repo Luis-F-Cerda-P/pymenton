@@ -1,0 +1,2 @@
+module ApplicabilityTypesHelper
+end

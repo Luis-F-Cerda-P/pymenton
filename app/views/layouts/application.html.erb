@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <!-- Un-Minified version -->
+    <link rel="stylesheet" href="app/assets/stylesheets/simple-v1.css">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
   <body>
     <div>
       <% if Current.user %>
-        <%= link_to Current.user.email, edit_password_path %> 
+        <%= link_to Current.user.email, edit_password_path %>
         <%= button_to "Logout", logout_path, method: :delete%>
       <% else %>
         <%= link_to "Log in", new_session_path  %> ||
-        <%= link_to "Sign up", new_user_path  %> 
+        <%= link_to "Sign up", new_user_path  %>
       <% end %>
     </div>
     <div>

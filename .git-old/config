@@ -1,0 +1,10 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[diff "rails_credentials"]
+	textconv = bin/rails credentials:diff
+[remote "origin"]
+	url = https://github.com/Luis-F-Cerda-P/pymenton.git
+	fetch = +refs/heads/*:refs/remotes/origin/*

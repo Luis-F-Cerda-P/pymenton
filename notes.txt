@@ -1,0 +1,14 @@
+TODO: 
++ Leer (o descargar) una copia de la información en 'Inventario 1'
++ Traducir las funciones que creé en Javascript para instanciar la base de datos a Ruby 
++ Hacerlas parte de la app 
++ Crear background jobs para que cuando llegue una notification sepamos que hacer 
++ Crear un envoltorio para usar desde nuestra app la API de MercadoLibre
+  + Usar las funciones que ya existen en C:/users/luisc/Documents/Programacion/Placasv1
+  
++ Primer bakcground job: extraer las ventas de mercadolibre y actualizar el inventario 
+
+LISTO: 
++ Agregar Simple.css
++ Crear algunos nav links
++ Ir y corregir el typo en app/models/container.rb

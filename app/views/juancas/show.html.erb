@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @juanca %>
+
+<div>
+  <%= link_to "Edit this juanca", edit_juanca_path(@juanca) %> |
+  <%= link_to "Back to juancas", juancas_path %>
+
+  <%= button_to "Destroy this juanca", @juanca, method: :delete %>
+</div>

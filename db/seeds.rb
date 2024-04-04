@@ -3,12 +3,10 @@ require 'csv'
 def obtain_all_model_names
   # Get all the model files in the app/models directory
   model_files = Dir[Rails.root.join('app', 'models', '*.rb')]
-
   # Extract model names from file names
   models = model_files.map do |file|
     File.basename(file, '.rb').camelize.constantize
   end
-
   # Filter out non-class objects and return class names
   model_names = models.select { |m| m.is_a?(Class) }.map(&:name)
 end
@@ -21,23 +19,22 @@ def seed_exists?(path)
   File.exist?(path)
 end
 
+def csv_to_data(path, model_name)
+  if model_name != 'Offer' && model_name != 'Product'
+    CSV.read(path, headers: true, liberal_parsing: true)
+  else
+    CSV.read(path, headers: true, col_sep: '{', liberal_parsing: true)
+  end
+end
+
 def load_seed(path, model_name)
   seeded_counter = 0
-  csv_data = if model_name != 'Offer' && model_name != 'Product'
-               CSV.read(path, headers: true, liberal_parsing: true)
-             else
-               CSV.read(path, headers: true, col_sep: '{', liberal_parsing: true)
-             end
   model = model_name.constantize
-  # Process the CSV data here
+  csv_data = csv_to_data(path, model_name)
   csv_data.each do |row|
     attempt = model.new(row.to_hash)
-    if attempt.valid?
-      attempt.save
-      seeded_counter += 1
-    end
+    attempt.valid? ? (attempt.save; seeded_counter += 1) : puts('Row conversion to hash failed ') # rubocop:disable Style/Semicolon
   end
-
   puts "We seeded #{seeded_counter} records for the #{model} model. Currently this model holds #{model.count} records"
 end
 
